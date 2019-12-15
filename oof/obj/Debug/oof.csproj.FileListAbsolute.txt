@@ -1,0 +1,11 @@
+C:\Users\OOP14\source\repos\oof\oof\bin\Debug\oof.exe.config
+C:\Users\OOP14\source\repos\oof\oof\bin\Debug\oof.exe
+C:\Users\OOP14\source\repos\oof\oof\bin\Debug\oof.pdb
+C:\Users\OOP14\source\repos\oof\oof\obj\Debug\oof.csprojAssemblyReference.cache
+C:\Users\OOP14\source\repos\oof\oof\obj\Debug\oof.Form1.resources
+C:\Users\OOP14\source\repos\oof\oof\obj\Debug\oof.Properties.Resources.resources
+C:\Users\OOP14\source\repos\oof\oof\obj\Debug\oof.csproj.GenerateResource.cache
+C:\Users\OOP14\source\repos\oof\oof\obj\Debug\oof.csproj.CoreCompileInputs.cache
+C:\Users\OOP14\source\repos\oof\oof\obj\Debug\oof.exe
+C:\Users\OOP14\source\repos\oof\oof\obj\Debug\oof.pdb
+C:\Users\OOP14\source\repos\oof\oof\obj\Debug\oof.TicTacToe.resources
