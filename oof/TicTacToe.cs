@@ -10,15 +10,16 @@ using System.Windows.Forms;
 
 namespace oof
 {
+    public enum Players
+    {
+        Not,
+        Cross,
+        Zero
+    }
+
     public partial class TicTacToe : Form
     {
-        enum Players
-        {
-            Not,
-            Cross,
-            Zero
-        }
-
+       
         Players last_player = Players.Zero;
         Players[] Boxes = new Players[9];
         Players win = Players.Not;
@@ -42,7 +43,13 @@ namespace oof
             cur_button.Enabled = false;
 
             end_game();
-            if 
+            if (!win.Equals(Players.Not))
+            {
+                using(Win w = new Win(win))
+                {
+                    w.ShowDialog();
+                }
+            } 
         }
 
         private void end_game()
@@ -60,6 +67,15 @@ namespace oof
             {
                 win = Boxes[0];
             } else if (Boxes[2].Equals(Boxes[4]) && Boxes[2].Equals(Boxes[6]) && !Boxes[2].Equals(Players.Not))
+            {
+                win = Boxes[2];
+            } else if(Boxes[0].Equals(Boxes[3]) && Boxes[0].Equals(Boxes[6]) && !Boxes[0].Equals(Players.Not))
+            {
+                win = Boxes[0];
+            } else if(Boxes[1].Equals(Boxes[4]) && Boxes[1].Equals(Boxes[7]) && !Boxes[1].Equals(Players.Not))
+            {
+                win = Boxes[1];
+            } else if(Boxes[2].Equals(Boxes[5]) && Boxes[2].Equals(Boxes[8]) && !Boxes[2].Equals(Players.Not))
             {
                 win = Boxes[2];
             }
@@ -119,6 +135,26 @@ namespace oof
         private void Button2_Click(object sender, EventArgs e)
         {
             players_replace(button2, 8);
+        }
+
+        private void Button10_Click(object sender, EventArgs e)
+        {
+            Button[] buttons = new Button[] { button1, button2, button3, button4, button5, button6, button7, button8, button9 };
+
+            for(int i = 0; i < buttons.Length; i++)
+            {
+                buttons[i].Enabled = true;
+                buttons[i].BackgroundImage = null;
+            }
+
+            last_player = Players.Zero;
+            Boxes = new Players[9];
+            win = Players.Not;
+        }
+
+        private void Button11_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
